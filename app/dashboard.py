@@ -132,7 +132,7 @@ def compute_alignment_and_tags():
     pred_sims = sim_matrix[np.arange(len(actions)), pred_idx]
     avg_sim = float(pred_sims.mean()) if len(pred_sims) > 0 else 0.0
 
-    threshold = 0.40
+    threshold = 0.50
     covered = 0
     for j in range(len(objectives)):
         if (sim_matrix[:, j] >= threshold).any():
