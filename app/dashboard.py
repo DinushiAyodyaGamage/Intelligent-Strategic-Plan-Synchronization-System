@@ -327,7 +327,7 @@ def main():
         col1, col2, col3 = st.columns(3)
         col1.metric("Top-1 alignment accuracy", f"{top1_acc:.1%}")
         col2.metric("Avg similarity (predicted pairs)", f"{avg_sim:.3f}")
-        col3.metric("Objective coverage (≥ 0.60)", f"{coverage:.1%}")
+        col3.metric("Objective coverage (≥ 0.50)", f"{coverage:.1%}")
 
         st.markdown("### Objective Support Summary")
         df_obj = pd.DataFrame(obj_summary)
